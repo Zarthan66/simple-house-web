@@ -204,7 +204,8 @@ header p {
     align-self: flex-end;
     margin-top: 2em;
     margin-right: 1em;
-    
+    min-width: 80px;
+    text-align: center;
 }
 .bottom figcaption a:hover {
     color: #252525;
