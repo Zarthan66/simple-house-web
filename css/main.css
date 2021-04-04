@@ -8,9 +8,7 @@ body {
     min-width: 320px;
 }
 
-.gallery-nav ul li:hover,
-.bottom figcaption a:hover,
-footer a:hover {
+.ul li:hover, a:hover {
     cursor: pointer;
 }
 
@@ -22,6 +20,10 @@ footer a:hover {
 
 h2, h1 {
     font-weight: lighter;
+}
+
+.current-page {
+    border-bottom: 1px solid white;
 }
 
 .hero-bg {
@@ -83,16 +85,12 @@ h2, h1 {
     padding: 1em 0;
 }
 
-.hero-nav li:first-child a {
-    border-bottom: 1px solid white;
-}
-
 .hero-nav li a:hover {
     border-bottom: 1px solid white;
 }
 
 header {
-    margin: 5em 1em 3em;
+    margin: 4em 1em 3em;
 }
 
 header h2 {
@@ -112,6 +110,7 @@ header p {
 }
 
 .gallery-nav ul {
+    margin: 3em 0 1em;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -171,8 +170,7 @@ header p {
 
 .bottom figure{
     width: 100%;
-    margin: 0 1em;
-    
+    margin: 0 1.3em;
 }
 
 .bottom figure img {
@@ -180,7 +178,6 @@ header p {
 }
 
 .bottom figcaption {
-    margin: 0 1em;
     line-height: 2em;
     width: 100%;
     display: flex;
@@ -244,16 +241,8 @@ footer a:hover {
     }
     
     .bottom figure{
-        text-align: center;
+        max-width: 550px;
     }
-    
-    .bottom figure img {
-        width: 568px;
-    }
-    
-    .bottom figcaption {
-        width: 568px;
-    } 
 }
 
 @media (min-width: 800px) {
@@ -263,6 +252,23 @@ footer a:hover {
         padding-bottom: 2em;
     }
 
+    .title {
+        margin: auto 3em;
+    }
+
+    .hero-nav {
+        margin: auto 3em;
+    }
+
+    header {
+        margin: 4em auto auto;
+        max-width: 800px;
+    }
+
+    .gallery {
+        justify-content: center;
+    }
+
     .gallery-page {
         display: grid;
         grid-template-columns: auto auto auto;
@@ -270,6 +276,7 @@ footer a:hover {
         padding: 0;
         justify-content: space-evenly;
         width: 100%;
+        max-width: 850px;
     }
 
     .gallery-page article figure {
@@ -277,26 +284,24 @@ footer a:hover {
     }
 
     .bottom {
-        display: grid;
-        grid-template-columns: repeat(2, 50%);
-        grid-template-areas: "image content";
-        align-items: top;
-        width: 100%;
+        max-width: 100%;
+        justify-self: center;
     }
     
     .bottom figure{
         width: fit-content;
-        grid-area: image;
-        justify-self: end;
-        max-width: 100%;
+        max-width: 820px;
+        display: flex;
     }
     
     .bottom figure img {
-        width: 95%;
+        width: 45%;
+        
+        height: fit-content;
     }
     
     .bottom figcaption {
-        max-width: 85%;
+        padding-left: 1.3em;
         width: fit-content;
         grid-area: content;
     } 
@@ -310,6 +315,21 @@ footer a:hover {
 @media (min-width: 1060px) {
     .gallery-page {
         grid-template-columns: auto auto auto auto;
+        max-width: 95%;
+    }
+    .bottom figcaption {
+        padding-left: 2.5em;
+     
+     
+    }
+    .bottom figure{
+        width: fit-content;
+        max-width: 90%;
+        display: flex;
+    }
+    .bottom img {
+        width: 100%;
+        max-width: 530px;
     }
 }
 
@@ -319,4 +339,151 @@ footer a:hover {
     }
 }
 
+/**** CSS for about.html *********************************/
+.person {
+    display: flex;
+    margin: 2em 0;
+}
 
+.person img {
+    height: fit-content;
+}
+
+.person-name {
+    font-size: 2rem;
+    font-weight: bolder;
+    margin: 0 .5em;
+    color: #65ffc1;
+}
+
+.person-title {
+    margin: .5em 1em;
+    font-weight: bolder;
+    color: #f7a8e3;
+}
+
+.person-about {
+    margin: 1em;
+    font-size: 1rem;
+    line-height: 2em;
+}
+
+.bottom-about {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bottom-about figure{
+    width: 100%;
+    margin: 1em 1.3em;
+}
+
+.bottom-about figure img {
+    width: 100%;
+}
+
+.bottom-about figcaption {
+    line-height: 2em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+} 
+
+.bottom-about figcaption h4 {
+    margin: 1em 0 .5em;
+    font-size: 1.2rem;
+}
+
+.bottom-about figcaption p {
+    margin: 0;
+}
+
+.bottom-about figcaption a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: .4em 1.2em;
+    align-self: flex-end;
+    margin-top: 2em;
+    margin-right: 1em;
+    min-width: 80px;
+    text-align: center;
+}
+.bottom-about figcaption a:hover {
+    color: #252525;
+    background-color: white;
+    border: 1px solid #252525;
+}
+
+@media (min-width: 600px) {
+    .about-page {
+        margin: 0 1.5em;
+    }
+
+    .bottom-about {
+        justify-content: center;
+    }
+    
+    .bottom-about figure{
+        max-width: 550px;
+    }
+}
+
+@media (min-width: 800px) {
+    .bottom-about {
+        max-width: 100%;
+        justify-self: center;
+    }
+
+    .bottom-about img {
+        width: 100%;
+        max-width: 530px;
+    }
+    
+    .bottom-about figure{
+        width: fit-content;
+        max-width: 90%;
+        display: flex;
+    }
+    
+    .bottom-about figure img {
+        width: 45%;
+        
+        height: fit-content;
+    }
+    
+    .bottom-about figcaption {
+        padding-left: 2.5em;
+        width: fit-content;
+        grid-area: content;
+    } 
+}
+
+@media (min-width: 900px) {
+    .about-page {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-evenly;   
+        margin: 3em 0;
+    }
+
+    .person {
+        max-width: 480px;
+        margin: 2em 1em;
+    }
+    
+    .person-name {
+        font-size: 2rem;
+        margin: 0 .5em;
+    }
+    
+    .person-title {
+        margin: .5em 1em;
+    }
+    
+    .person-about {
+        margin: .2em 1em;
+        line-height: 2em;
+    }
+}
+/**** End CSS for about.html *****************************/
