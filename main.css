@@ -1,0 +1,489 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background: #151515;
+    color: white;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+}
+
+.ul li:hover, a:hover {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1200px;
+    background-color: #252525;
+    width: 100%;
+}
+
+h2, h1 {
+    font-weight: lighter;
+}
+
+.current-page {
+    border-bottom: 1px solid white;
+}
+
+.hero-bg {
+    color: white;
+    background-image: url("../img/simple-house-01.jpg");
+    width: 100%;
+    height: fit-content;
+    background-size: cover;
+    background-position: 0 55%;
+    padding-top: 18em;
+    padding-bottom: 1em;
+}
+
+.hero-nav {
+    margin-right: 1em;
+}
+
+.title {
+    display: flex;
+    margin: 0 1em;
+    height: fit-content;
+}
+
+.title div {
+    padding: 0 1em;
+    margin: 0;
+}
+
+.title div h1 {
+    margin: 0;
+}
+
+.title div p {
+    margin: .3em 0 0;
+    font-weight: bold;
+}
+
+.title img {
+    width: 60px;
+    max-height: 60px;
+    align-self: center;
+}
+
+.hero-nav ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1.5em 0 0;
+}
+
+.hero-nav li {
+    padding: 0 1em;
+    padding-bottom: 1em;
+    list-style-type: none;
+}
+
+.hero-nav li a {
+    color: white;
+    text-decoration: none;
+    padding: 1em 0;
+}
+
+.hero-nav li a:hover {
+    border-bottom: 1px solid white;
+}
+
+header {
+    margin: 4em 1em 3em;
+}
+
+header h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+header p {
+    text-align: center;
+    line-height: 2em;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.gallery-nav ul {
+    margin: 3em 0 1em;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.gallery-nav ul li {
+    padding: .8em 2em;
+    margin: 0 1em 1em;
+    list-style-type: none;
+    border: 1px solid #2f956d;
+    background-color: #2f956c18;
+    color: #65ffc1;
+}
+
+.gallery-nav ul li:hover {
+    border: 1px solid #2f956d;
+    background-color: #2f956d;
+    color: white;
+}
+
+.gallery-page {
+    margin: 0 1em;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-page article {
+    margin: 0;
+}
+
+.gallery-page figure {
+    width: min-content;
+    margin: 1em;
+}
+
+.gallery-page figcaption {
+    text-align: left;
+}
+
+.gallery-page p {
+    line-height: 1.5em;
+}
+
+.gallery-page .price {
+    color: #65ffc1;
+}
+
+.bottom {
+    margin-top: 5em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bottom figure{
+    width: 100%;
+    margin: 0 1.3em;
+}
+
+.bottom figure img {
+    width: 100%;
+}
+
+.bottom figcaption {
+    line-height: 2em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+} 
+
+.bottom figcaption h4 {
+    margin: 1em 0 .5em;
+    font-size: 1.2rem;
+}
+
+.bottom figcaption p {
+    margin: 0;
+}
+
+.bottom figcaption a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: .4em 1.2em;
+    align-self: flex-end;
+    margin-top: 2em;
+    margin-right: 1em;
+    min-width: 80px;
+    text-align: center;
+}
+.bottom figcaption a:hover {
+    color: #252525;
+    background-color: white;
+    border: 1px solid #252525;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 1.7em;
+    width: 100%;
+}
+
+footer p:first-child {
+    margin-top: 4em;
+}
+
+footer p:last-child {
+    margin: 0 0 2em;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #65ffc1;
+}
+
+@media (min-width: 600px) {
+    .bottom {
+        justify-content: center;
+    }
+    
+    .bottom figure{
+        max-width: 550px;
+    }
+}
+
+@media (min-width: 800px) {
+    .hero-bg {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 2em;
+    }
+
+    .title {
+        margin: auto 3em;
+    }
+
+    .hero-nav {
+        margin: auto 3em;
+    }
+
+    header {
+        margin: 4em auto auto;
+        max-width: 800px;
+    }
+
+    .gallery {
+        justify-content: center;
+    }
+
+    .gallery-page {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        margin: 0;
+        padding: 0;
+        justify-content: space-evenly;
+        width: 100%;
+        max-width: 850px;
+    }
+
+    .gallery-page article figure {
+        margin: 0 .5em;       
+    }
+
+    .bottom {
+        max-width: 100%;
+        justify-self: center;
+    }
+    
+    .bottom figure{
+        width: fit-content;
+        max-width: 820px;
+        display: flex;
+    }
+    
+    .bottom figure img {
+        width: 45%;
+        
+        height: fit-content;
+    }
+    
+    .bottom figcaption {
+        padding-left: 1.3em;
+        width: fit-content;
+        grid-area: content;
+    } 
+
+    .bottom figcaption h4 {
+        margin-top: 0;
+    }
+    
+}
+
+@media (min-width: 1060px) {
+    .gallery-page {
+        grid-template-columns: auto auto auto auto;
+        max-width: 95%;
+    }
+    .bottom figcaption {
+        padding-left: 2.5em;
+     
+     
+    }
+    .bottom figure{
+        width: fit-content;
+        max-width: 90%;
+        display: flex;
+    }
+    .bottom img {
+        width: 100%;
+        max-width: 530px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        margin: 0 auto;
+    }
+}
+
+/**** CSS for about.html *********************************/
+.person {
+    display: flex;
+    margin: 2em 0;
+}
+
+.person img {
+    height: fit-content;
+}
+
+.person-name {
+    font-size: 2rem;
+    font-weight: bolder;
+    margin: 0 .5em;
+    color: #65ffc1;
+}
+
+.person-title {
+    margin: .5em 1em;
+    font-weight: bolder;
+    color: #f7a8e3;
+}
+
+.person-about {
+    margin: 1em;
+    font-size: 1rem;
+    line-height: 2em;
+}
+
+.bottom-about {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bottom-about figure{
+    width: 100%;
+    margin: 1em 1.3em;
+}
+
+.bottom-about figure img {
+    width: 100%;
+}
+
+.bottom-about figcaption {
+    line-height: 2em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+} 
+
+.bottom-about figcaption h4 {
+    margin: 1em 0 .5em;
+    font-size: 1.2rem;
+}
+
+.bottom-about figcaption p {
+    margin: 0;
+}
+
+.bottom-about figcaption a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: .4em 1.2em;
+    align-self: flex-end;
+    margin-top: 2em;
+    margin-right: 1em;
+    min-width: 80px;
+    text-align: center;
+}
+.bottom-about figcaption a:hover {
+    color: #252525;
+    background-color: white;
+    border: 1px solid #252525;
+}
+
+@media (min-width: 600px) {
+    .about-page {
+        margin: 0 1.5em;
+    }
+
+    .bottom-about {
+        justify-content: center;
+    }
+    
+    .bottom-about figure{
+        max-width: 550px;
+    }
+}
+
+@media (min-width: 800px) {
+    .bottom-about {
+        max-width: 100%;
+        justify-self: center;
+    }
+
+    .bottom-about img {
+        width: 100%;
+        max-width: 530px;
+    }
+    
+    .bottom-about figure{
+        width: fit-content;
+        max-width: 90%;
+        display: flex;
+    }
+    
+    .bottom-about figure img {
+        width: 45%;
+        
+        height: fit-content;
+    }
+    
+    .bottom-about figcaption {
+        padding-left: 2.5em;
+        width: fit-content;
+        grid-area: content;
+    } 
+}
+
+@media (min-width: 900px) {
+    .about-page {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-evenly;   
+        margin: 3em 0;
+    }
+
+    .person {
+        max-width: 480px;
+        margin: 2em 1em;
+    }
+    
+    .person-name {
+        font-size: 2rem;
+        margin: 0 .5em;
+    }
+    
+    .person-title {
+        margin: .5em 1em;
+    }
+    
+    .person-about {
+        margin: .2em 1em;
+        line-height: 2em;
+    }
+}
+/**** End CSS for about.html *****************************/
